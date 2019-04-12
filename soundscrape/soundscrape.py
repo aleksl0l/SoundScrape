@@ -547,10 +547,10 @@ def process_bandcamp(vargs):
 
     filenames = scrape_bandcamp_url(
         bc_url,
-        num_tracks=vargs['num_tracks'],
-        folders=vargs['folders'],
-        custom_path=vargs['path'],
-        custom_dir=vargs['custom_dir']
+        num_tracks=vargs.get('num_tracks'),
+        folders=vargs.get('folders'),
+        custom_path=vargs.get('path'),
+        custom_dir=vargs.get('custom_dir')
     )
 
     # check if we have lists inside a list, which indicates the
